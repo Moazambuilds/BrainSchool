@@ -1,50 +1,51 @@
 .container2{
     max-width: 100%;
-    height: 570px;
-  
+    height: 650px;
+    
 }
 .container2 img{
     width: 100%;
     height: 100%;
 }
-.aboutbox{
-    width: 70%;
-    height: 500px;
-    gap: 30px;
-    margin: 90px 0 0 180px;
+.alluminiheading{
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.395);
+    margin-top: 30px;
 }
-.aboutimg {
-    width: 45%;
-    height: 450px;
-    padding-top: 30px;
+.alluminibox{
+ width: 90%;
+ height: 520px;
+ display: grid;
+ grid-template-columns: 30% 30% 30%;
+ gap: 55px;
+ margin: 50px 0 0 75px;
 }
-.abouttext{
-    width: 45%;
-    height: 100%;
-    
-    padding: 40px 20px 10px 20px;
-   
-}
-.abouttext h1{
-   
-    padding-left: 40px;
-}
-.abouttext p{
-    font-size: 20px;
-    line-height: 25px;
-}
-.aboutimg img{
+.allumini12{
     width: 100%;
-    height: auto;
-    padding: 10px;
+    height: 520px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.427);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+}
+.allumini12 img{
+   width: 100%;
+   height: 400px;
+}
+.allumini12 h3{
+    margin-top: 10px;
+    font-size: 20px;
+   
+    letter-spacing: 3px;
     
 }
 hr{
-    margin-top: 100px;
+    margin-top: 50px;
     width: 80%;
     height: 3px;
     background-color: black;
