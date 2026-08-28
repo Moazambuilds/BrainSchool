@@ -1,7 +1,7 @@
 // Reload header and footer first
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetch("/reload/header.html")
+    fetch("/shared/header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("header").innerHTML = data;
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-    fetch("/reload/footer.html")
+    fetch("/shared/footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("footer").innerHTML = data;
