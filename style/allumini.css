@@ -1,5 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 .container2{
-    max-width: 100%;
+    width: 100%;
     height: 650px;
     
 }
@@ -20,8 +23,8 @@
  height: 520px;
  display: grid;
  grid-template-columns: 30% 30% 30%;
- gap: 55px;
  margin: 20px auto;
+ justify-content: space-between;
 }
 .allumini12{
     width: 100%;
@@ -51,48 +54,21 @@ hr{
     background-color: black;
     border: none;
 }
-.opensearch{
-    cursor: pointer;
-}
-.searchbox{
-position: absolute;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 70px;
-background-color: rgb(237, 237, 237);
-display: none;
-align-items: center;
-justify-content: center;
-gap: 20px;
-}
-.inputbox{
-    background-color: white;
-    width: 40%;
-    height: 40px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.489);
-}
-.inputbox input{
-    width: 90%;
-    height: 20px;
-    border: none;
-    outline: none;
-    cursor:text;
-}
-.inputbox .fa-magnifying-glass{
-    width: 5%;
-    font-size: 18px;
-    padding-left: 10px;
-    cursor: pointer;
-}
-.searchbox button{
-    padding: 7px 20px;
-    font-size: 16px;
-}
-.searchbox i{
-    font-size: 30px;
-    cursor: pointer;
+@media (max-width:768px){
+    .container2{
+        height: 345px;
+    }
+    .container2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .alluminibox{
+        width:90%;
+        height: auto;
+        margin: 20px auto;
+        grid-template-columns: 90% ;
+        row-gap: 20px;
+        justify-content: center;
+    }
 }
