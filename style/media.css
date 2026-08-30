@@ -1,17 +1,20 @@
+*{
+    box-sizing: border-box;
+}
 .container2{
-    max-width: 100%;
-    height: 500px;
-    
+    width: 100%;
+    height: 600px;    
 }
 .container2 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .headingcontact{
     display: flex;
     align-items: center;
     justify-content: center;
-     margin: 50px 0 5px 0;
+     margin: 20px auto;
 }
 .headingcontact h1{
     font-size: 50px;
@@ -23,7 +26,7 @@
     box-sizing: border-box;
     grid-template-columns: 25% 25% 25%;
     justify-content: space-between;
-     margin: 40px auto;
+    margin: 40px auto;
 }
 .contact12{
     width: 100%;
@@ -81,17 +84,18 @@ hr{
     
 }
 .socialbox{
-    width: 60%;
+    width: 70%;
     height: 780px;
     display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: space-between;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
     margin: 50px auto;
+    column-gap: 150px;
     row-gap: 60px;
 }
 .facebook{
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -118,7 +122,7 @@ hr{
 .whatsapp{
     
     width: 100%;
-    height: 100%;
+    height: auto;
      display: flex;
     flex-direction: column;
     background-color: white;
@@ -144,8 +148,8 @@ hr{
 .youtube{
     
     width: 100%;
-    height: 100%;
-     display: flex;
+    height: auto;
+    display: flex;
     flex-direction: column;
     background-color: white;
     align-items: center;
@@ -156,7 +160,7 @@ hr{
   height: 250px;
 }
 .youtube a{
-     padding: 10px 30px 10px 30px;
+   padding: 10px 20px;
    margin-top: 40px;
    color: white;
    border: none;
@@ -169,8 +173,8 @@ hr{
 .instagram{
     
     width: 100%;
-    height: 100%;
-     display: flex;
+    height: auto;
+    display: flex;
     flex-direction: column;
     background-color: white;
     align-items: center;
@@ -240,4 +244,80 @@ gap: 20px;
 .searchbox i{
     font-size: 30px;
     cursor: pointer;
+}
+@media (max-width:992px) {
+    .contact{
+        width: 80%;
+        height: 500px;
+        grid-template-columns: 35% 35% ;
+        justify-content:center;
+        column-gap: 50px;
+        row-gap: 20px;
+    }
+    .contact12,.contact13{
+        height: auto;
+    }
+    .headingcontact h1{
+        font-size: 35px;
+    }
+}
+@media (max-width:768px) {
+    .container2{
+        height: 400px;
+    }
+    .contact{
+        width: 90%;
+        height: auto;
+        grid-template-columns: 40% 40% ;
+        justify-content: center;
+        column-gap: 40px;
+        row-gap: 20px;
+
+    }
+    .contact12,.contact13{
+        height: auto;
+    }
+    .headingcontact h1{
+        font-size: 30px;
+    }
+}
+@media (max-width:580px){
+ .container2{
+        height: 300px;
+    }
+    .contact{
+        width: 90%;
+        height: auto;
+        grid-template-columns: 100%;
+        justify-content: center;
+        column-gap: 40px;
+        row-gap: 20px;
+
+    }
+    .contact12,.contact13{
+        height: auto;
+    }
+    .headingcontact h1{
+        font-size: 20px;
+    }
+    .socialheading{
+        height: auto;
+    }
+    .socialheading h1{
+        font-size: 30px;
+       
+    }
+    .socialbox{
+        width: 90%;
+        height: auto;
+        grid-template-columns: 70%;
+        justify-content: center;
+        margin: 10px auto;
+        
+    }
+    .facebook a,.whatsapp a,.instagram a,.youtube a{
+      margin-bottom: 20px;
+    }
+
+    
 }

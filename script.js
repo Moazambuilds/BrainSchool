@@ -6,6 +6,46 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             document.getElementById("header").innerHTML = data;
 
+        const toggleIcon = document.querySelector(".toggle-icon");
+        const menu = document.querySelector(".menu");
+        const cross = document.querySelector(".cross-icon");
+
+        toggleIcon.addEventListener("click", function () {
+            menu.classList.toggle("active");
+            toggleIcon.style.display="none";
+            cross.style.display="block";
+        })
+
+        cross.addEventListener("click", function () {
+            menu.classList.remove("active");
+            toggleIcon.style.display="block";
+            cross.style.display="none";
+        });
+
+        // =========================
+        // DROPDOWN
+        // =========================
+
+        const dropdownToggles =
+            document.querySelectorAll(".dropdown-toggle");
+
+        dropdownToggles.forEach(function (toggle) {
+
+            toggle.addEventListener("click", function (event) {
+
+                if (window.innerWidth <= 992) {
+
+                    event.preventDefault();
+
+                    const parent = toggle.parentElement;
+
+                    parent.classList.toggle("dropdown-open");
+
+                }
+
+            });
+
+        });
             // Header load hone ke BAAD ye code chalega
             const links = document.querySelectorAll(".menu ul a:not(.no-active)");
 

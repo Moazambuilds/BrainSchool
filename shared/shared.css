@@ -1,6 +1,6 @@
 body{
     margin:0%;
-    
+    padding: 0%;
 }
 .header{
     width: 100%;
@@ -21,6 +21,9 @@ body{
     height: 100%;
     display: flex;
     box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    
 }
 .logo {
     width: 8%;
@@ -28,27 +31,27 @@ body{
   
 }
 .logo img{
-    height: 50px;
+    height: 50px; 
     padding: 8px 0 0 30px;
 }
 .text{
    
     width: 30%;
     height: 100%;
+   
 } 
-.menu{
-    
-    width: 70%;
+.menu{ 
+    width: 60%;
     height: 100%;
     display: flex;
     position: relative;
+    
    
     }   
 .menu ul{
     list-style: none;
     display: flex;
-    align-items: center;
-   
+    align-items: center; 
     gap: 30px;
 }
 .menu li a{
@@ -84,12 +87,7 @@ body{
 .drop:hover .dropdown ul{
     display: block;
 }
-.search{
-    width: 5%;
-    height: 100%;
-     display: flex;
-    align-items: center;
-}
+
 .menu li a:hover{
     color :rgb(171, 175, 183);
 }
@@ -121,10 +119,23 @@ body{
     
 }
 .search{
+    width: 5%;
+    height: 100%;
     display: flex;
     align-items: center;
+    gap: 10px;
+    padding-right: 10px ;
+    
 }
-
+.search .toggle-icon{
+    display: none;
+    cursor: pointer;
+}
+.search .cross-icon{
+ font-size: 18px;
+ display: none;
+ cursor: pointer;
+}
 .opensearch{
     cursor: pointer;
 }
@@ -187,4 +198,182 @@ gap: 20px;
 }
 .footerbox a:hover{
     opacity: 0.5;
+}
+@media (max-width:1200px) {
+    .logo{
+     width: 8%;
+    }
+    .text{
+       width: 25%;
+       font-size: 16px;
+    }
+    .menu{
+        width:80% ;
+        
+    }
+    .search{
+     width: 2%;
+    }
+}
+@media (max-width:1100px) {
+    .logo{
+     width: 18%;
+    }
+    .text{
+        display: none;
+    }
+    .menu{
+      
+        width:78% ;
+        
+    }
+    .search{
+     width: 5%;
+    }
+}
+ @media (max-width: 992px) {
+
+    .container {
+        align-items: center;
+    }
+
+    /* Logo */
+    .logo {
+        width: 15%;
+    }
+
+    .logo img {
+        margin: 5px auto;
+    }
+
+    /* School name */
+    .text {
+        width: 70%;
+    }
+
+    /* Mobile Menu */
+    .menu {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+
+    .menu ul {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 0;
+        background-color: aliceblue;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .menu ul a {
+        font-size: 16px;
+        width: auto;
+        height: auto;
+        padding: 8px 0;
+        text-align: center;
+    }
+
+
+    /* Search + Toggle */
+    .search {
+        width: 85%;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    .search .toggle-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .search .cross-icon {
+        display: none;
+        cursor: pointer;
+    }
+
+
+    /* Result / More icons hide */
+    
+
+
+    /* =========================
+       DROPDOWN
+       ========================= */
+
+    .dropdown,
+    .dropdown1 {
+        position: static;
+    }
+
+    /* Initially hidden */
+    .dropdown ul,
+    .dropdown1 ul {
+        display: none;
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        box-shadow: none;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    /* Result open */
+    .drop.dropdown-open .dropdown ul {
+        display: block;
+    }
+
+    /* More open */
+    .drop1.dropdown-open .dropdown1 ul {
+        display: block;
+    }
+
+
+    /* Dropdown links */
+    .dropdown ul li,
+    .dropdown1 ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .dropdown ul li a,
+    .dropdown1 ul li a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .footerbox {
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+        padding: 20px 15px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footerbox a {
+        font-size: 16px;
+    }
 }
