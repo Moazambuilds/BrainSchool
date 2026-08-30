@@ -28,6 +28,9 @@ body{
 .header.scrolled .toggle-icon{
     color: black;
 }
+.header.scrolled .cross-icon{
+    color: black;
+}
 .header.scrolled .menu li a.active {
     color: white;
 }
@@ -329,6 +332,7 @@ gap: 20px;
     .search .cross-icon {
         display: none;
         cursor: pointer;
+        color: white;
     }
 
 
