@@ -1,0 +1,230 @@
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+.container2{
+    width: 100%;
+    height: 550px;
+}
+.container2 img{
+    width: 100%;
+    height: 100%;
+}
+.dicheading{  
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px;
+}
+.directorbox{
+    width:70%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 40% 40%;  
+    justify-content: space-between;
+    margin: 20px auto;
+}
+.director{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow:  0 0 20px 0 rgba(0, 0, 0, 0.249);
+}
+.director img{  
+    width: 100%;
+    height: 400px;
+}
+.director h3{
+  padding-top: 30px;
+  font-size: 25px;
+}
+.schoolheading{  
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px;
+}
+/*.schoolbox{
+    width:90%;
+    height: 1700px;
+    display: grid;
+    grid-template-columns: 45% 45%;  
+    justify-content: space-between;
+    margin: 20px auto;
+    row-gap: 40px;
+}
+.schoolitem{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow:  0 0 20px 0 rgba(0, 0, 0, 0.249);
+}
+.schoolitem img{  
+    width: 100%;
+    height: 100%;
+}*/
+.slider{
+    width: 70%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow:  0 0 20px 0 rgba(0, 0, 0, 0.249);
+}
+.slides{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+.slides img{
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+   width: 45px;
+   height: 45px;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.543);
+   font-size: 25px;
+   border-radius: 50%;
+   border: none;
+   z-index: 10;
+   cursor: pointer;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+hr{
+    margin:50px auto;
+    width: 80%;
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+.awardheading{
+      width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px; 
+}
+.awardbox{
+     width:90%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 47% 47%;  
+    justify-content: space-between;
+    margin: 20px auto;
+}
+.award {
+    width: 100%;
+    height: 100%;
+     box-shadow:  0 0 20px 0 rgba(0, 0, 0, 0.249);
+}
+.award img{
+    width: 100%;
+    height: 100%;
+}
+
+.cultureheading{
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px; 
+}
+.culturebox{
+    width: 80%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+.culture{
+width: 100%;
+min-height: 0;
+height: 100%;
+
+}
+.culture img{
+    width: 100%;
+    height: 100%;
+   
+}
+@media (max-width:768px) {
+    .dicheading{
+        font-size: 20px;
+    }
+    .directorbox{
+        width: 80%;
+    }
+    .schoolheading{
+        font-size: 20px;
+    }
+    .awardheading{
+        font-size: 20px;
+    }
+    .awardbox{
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    .cultureheading{
+        font-size: 20px;
+    }
+    .culturebox{
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+@media (max-width:600px) {
+    .container2{
+        width: 100%;
+        height: 400px;
+    }
+    .dicheading{
+        font-size: 16px;
+    }
+    .directorbox{
+        width: 90%;
+        justify-content: center;
+        grid-template-columns: 50% 50%;
+        gap:15px;
+    }
+    .directorbox h3{
+        font-size: 16px;
+    }
+    .schoolheading{
+        font-size: 16px;
+    }
+    .awardheading{
+        font-size: 16px;
+    }
+    .awardbox{
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        grid-template-columns: 80%;
+    }
+    .cultureheading{
+        font-size: 20px;
+    }
+    .culturebox{
+        width: 100%;
+        justify-content: center;
+        grid-template-columns: 80%;
+        gap: 15px;
+    }
+}
+
