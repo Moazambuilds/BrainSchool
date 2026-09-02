@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Image */
+.image-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.media-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact Text */
+.contact-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contact-section h1 {
+    font-size: 30px;
+    color: #1b4f9c;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    color: #333;
+}

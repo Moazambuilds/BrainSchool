@@ -1,0 +1,27 @@
+.alumni-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.alumni-image {
+    flex-shrink: 0;
+}
+
+.alumni-content {
+    flex: 1;
+}
+
+.alumni-content h2 {
+    margin-bottom: 8px;
+}
+
+.alumni-content h3 {
+    margin-bottom: 15px;
+}
+
+.alumni-content p {
+    line-height: 1.6;
+    margin: 0;
+}
