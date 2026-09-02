@@ -1,0 +1,13 @@
+{
+  "name": "brainschool",
+  "private": true,
+  "version": "0.0.0",
+  "description": "BrainSchool static site",
+  "scripts": {
+    "dev": "live-server --port=8000 --open=components/home.html",
+    "start": "live-server --port=8000 --open=components/home.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
