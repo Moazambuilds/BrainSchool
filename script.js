@@ -26,25 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
         // DROPDOWN
         // =========================
 
-        const dropdownToggles =
-            document.querySelectorAll(".dropdown-toggle");
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-        dropdownToggles.forEach(function (toggle) {
+dropdownToggles.forEach(function (toggle) {
 
-            toggle.addEventListener("click", function (event) {
+    toggle.addEventListener("click", function (event) {
 
-                if (window.innerWidth <= 992) {
+        if (window.innerWidth <= 992) {
 
-                    event.preventDefault();
+            event.preventDefault();
 
-                    const parent = toggle.parentElement;
+            const parent = toggle.parentElement;
 
-                    parent.classList.toggle("dropdown-open");
+            parent.classList.toggle("dropdown-open");
 
-                }
+        }
 
-            });
+    });
 
+});
         });
             // Header load hone ke BAAD ye code chalega
             const links = document.querySelectorAll(".menu ul a:not(.no-active)");
@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("footer").innerHTML = data;
         });
 
-});
 
 
 // Header scroll

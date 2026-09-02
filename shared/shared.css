@@ -1,93 +1,138 @@
-body{
-    margin:0%;
-    padding: 0%;
+/* =========================
+   GLOBAL
+   ========================= */
+
+body {
+    margin: 0;
+    padding: 0;
 }
-.header{
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
     width: 100%;
     height: 70px;
     position: fixed;
-    margin: 0%;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     z-index: 999;
     transition: 0.3s;
-    
 }
-.header.scrolled{
+
+.header.scrolled {
     background-color: white;
 }
-.header.scrolled .menu li a{
+
+.header.scrolled .menu li a {
     color: black;
 }
-.header.scrolled  .text{
+
+.header.scrolled .text,
+.header.scrolled .opensearch,
+.header.scrolled .toggle-icon,
+.header.scrolled .cross-icon {
     color: black;
 }
-.header.scrolled .opensearch{
-    color: black;
-}
-.header.scrolled .toggle-icon{
-    color: black;
-}
-.header.scrolled .cross-icon{
-    color: black;
-}
+
 .header.scrolled .menu li a.active {
     color: white;
 }
-.container{
+
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.container {
     width: 100%;
     height: 100%;
     display: flex;
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-    
+    margin: 0;
+    padding: 0;
 }
+
+
+/* =========================
+   LOGO
+   ========================= */
+
 .logo {
     width: 8%;
     height: 100%;
-  
 }
-.logo img{
-    height: 50px; 
+
+.logo img {
+    height: 50px;
     padding: 8px 0 0 30px;
 }
-.text{
-    color: white;
+
+
+/* =========================
+   SCHOOL NAME
+   ========================= */
+
+.text {
     width: 25%;
     height: 100%;
     display: flex;
     align-items: center;
-} 
-.menu{ 
+    color: white;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+.menu {
     width: 65%;
     height: 100%;
     display: flex;
     position: relative;
-    
-   
-    }   
-.menu ul{
+}
+
+.menu ul {
     list-style: none;
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 30px;
 }
-.menu li a{
+
+.menu li a {
     display: block;
+    width: 100%;
     color: white;
     font-size: 16px;
     text-decoration: none;
-    width: 100%;
-   
 }
-.header-icon{
+
+.menu li a:hover {
+    color: rgb(171, 175, 183);
+}
+
+
+/* =========================
+   DROPDOWN ICON
+   ========================= */
+
+.header-icon {
     padding-left: 10px;
 }
-.dropdown{
+
+
+/* =========================
+   RESULT DROPDOWN
+   ========================= */
+
+.dropdown {
     position: absolute;
 }
-.dropdown ul{
+
+.dropdown ul {
     width: 150px;
     height: 100px;
     padding: 20px 0 0 20px;
@@ -96,171 +141,228 @@ body{
     background-color: white;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.171);
 }
-.drop{
+
+.dropdown ul li {
+    width: auto;
+    margin-top: 10px;
+}
+
+.drop {
     justify-content: space-between;
-} 
-.dropdown ul li{
-  width:auto;
-  margin-top: 10px ;
 }
-.drop:hover .dropdown ul{
-    display: block;
-}
-.menu li a:hover{
-    color :rgb(171, 175, 183);
-}
-.dropdown1{
+
+
+/* =========================
+   MORE DROPDOWN
+   ========================= */
+
+.dropdown1 {
     position: absolute;
     left: 75%;
 }
-.dropdown1 ul{
-    display: none;
+
+.dropdown1 ul {
     width: 200px;
     height: 150px;
-    background-color: white;
+    display: none;
     padding: 20px 0 0 20px;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.215);
     margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.215);
 }
-.dropdown1 li{
+
+.dropdown1 li {
     display: block;
     margin-top: 10px;
 }
-.drop1:hover .dropdown1 ul {
-    display:block ;
-}
-.menu a.active{
-    color: white;
-    background-color: rgb(22, 27, 34);
-    align-items: center;
-    padding: 8px;
-    
-}
+
+
+/* Dropdown links */
+
 .dropdown ul li a,
 .dropdown1 ul li a {
     color: black;
 }
-.search{
+
+
+/* =========================
+   ACTIVE LINK
+   ========================= */
+
+.menu a.active {
+    color: white;
+    background-color: rgb(22, 27, 34);
+    padding: 8px;
+    align-items: center;
+}
+
+
+/* =========================
+   SEARCH
+   ========================= */
+
+.search {
     width: 5%;
     height: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-right: 10px ;
-    
+    padding-right: 10px;
 }
-.search .toggle-icon{
+
+.search .toggle-icon {
     display: none;
     cursor: pointer;
 }
-.search .cross-icon{
- font-size: 18px;
- display: none;
- cursor: pointer;
+
+.search .cross-icon {
+    display: none;
+    font-size: 18px;
+    cursor: pointer;
 }
-.opensearch{
+
+.opensearch {
     color: white;
     cursor: pointer;
 }
-.searchbox{
-position: absolute;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 70px;
-background-color: rgb(237, 237, 237);
-display: none;
-align-items: center;
-justify-content: center;
-gap: 20px;
+
+
+/* =========================
+   SEARCH BOX
+   ========================= */
+
+.searchbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(237, 237, 237);
 }
-.inputbox{
-    background-color: white;
+
+.inputbox {
     width: 40%;
     height: 40px;
     display: flex;
-    gap: 10px;
     align-items: center;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.489);
+    gap: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.489);
 }
-.inputbox input{
+
+.inputbox input {
     width: 90%;
     height: 20px;
     border: none;
     outline: none;
-    cursor:text;
+    cursor: text;
 }
-.inputbox .fa-magnifying-glass{
+
+.inputbox .fa-magnifying-glass {
     width: 5%;
-    font-size: 18px;
     padding-left: 10px;
+    font-size: 18px;
     cursor: pointer;
 }
-.searchbox button{
+
+.searchbox button {
     padding: 7px 20px;
     font-size: 16px;
 }
-.searchbox i{
+
+.searchbox i {
     font-size: 30px;
     cursor: pointer;
 }
-.footerbox{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0 20px 0;
+
+
+/* =========================
+   DESKTOP DROPDOWN
+   ========================= */
+
+@media (min-width: 993px) {
+
+    .drop:hover .dropdown ul {
+        display: block;
+    }
+
+    .drop1:hover .dropdown1 ul {
+        display: block;
+    }
+
 }
-.footerbox a{
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    font-family:  Arial;
-    font-weight: bold;
+
+
+/* =========================
+   1200px
+   ========================= */
+
+@media (max-width: 1200px) {
+
+    .logo {
+        width: 8%;
+    }
+
+    .text {
+        width: 25%;
+        font-size: 14px;
+    }
+
+    .menu {
+        width: 80%;
+    }
+
+    .search {
+        width: 2%;
+    }
+
 }
-.footerbox a:hover{
-    opacity: 0.5;
-}
-@media (max-width:1200px) {
-    .logo{
-     width: 8%;
+
+
+/* =========================
+   1100px
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .logo {
+        width: 18%;
     }
-    .text{
-       width: 25%;
-       font-size: 16px;
-    }
-    .menu{
-        width:80% ;
-        
-    }
-    .search{
-     width: 2%;
-    }
-}
-@media (max-width:1100px) {
-    .logo{
-     width: 18%;
-    }
-    .text{
+
+    .text {
         display: none;
     }
-    .menu{
-      
-        width:78% ;
-        
+
+    .menu {
+        width: 78%;
     }
-    .search{
-     width: 5%;
+
+    .search {
+        width: 5%;
     }
+
 }
- @media (max-width: 992px) {
+
+
+/* =========================
+   MOBILE / TABLET
+   ========================= */
+
+@media (max-width: 992px) {
+
+    /* Container */
 
     .container {
         align-items: center;
     }
 
+
     /* Logo */
+
     .logo {
         width: 15%;
     }
@@ -269,12 +371,16 @@ gap: 20px;
         margin: 5px auto;
     }
 
+
     /* School name */
+
     .text {
         width: 70%;
     }
 
-    /* Mobile Menu */
+
+    /* Menu */
+
     .menu {
         width: 100%;
         height: auto;
@@ -284,96 +390,74 @@ gap: 20px;
         display: none;
     }
 
+    .menu.active {
+        display: block;
+    }
+
     .menu ul {
         width: 100%;
         height: auto;
         flex-direction: column;
         gap: 0;
-        background-color: aliceblue;
         padding: 0;
         margin: 0;
-    }
-
-    .menu.active {
-        display: block;
+        background-color: aliceblue;
     }
 
     .menu ul li {
         width: 100%;
         margin: 5px 0;
     }
-    
+
     .menu ul a {
-        font-size: 16px;
         width: auto;
         height: auto;
-        padding: 8px 0;
+        padding: 4px 0;
+        font-size: 16px;
         text-align: center;
         color: black;
     }
 
-     .dropdown ul li a,
-    .dropdown1 ul li a {
-        color: black;
-    }
-    /* Search + Toggle */
-    .search {
-        width: 85%;
-        height: auto;
-        justify-content: flex-end;
-    }
-
-    .search .toggle-icon {
-        display: block;
-        cursor: pointer;
-        color: white;
-    }
-
-    .search .cross-icon {
-        display: none;
-        cursor: pointer;
-        color: white;
-    }
-
-
-    /* Result / More icons hide */
-    
-
 
     /* =========================
-       DROPDOWN
+       MOBILE DROPDOWN
        ========================= */
 
     .dropdown,
     .dropdown1 {
         position: static;
+        left: auto;
     }
 
-    /* Initially hidden */
     .dropdown ul,
     .dropdown1 ul {
         display: none;
         position: static;
         width: 100%;
         height: auto;
-        background-color: white;
-        box-shadow: none;
         padding: 5px 0;
         margin: 0;
+        background-color: white;
+        box-shadow: none;
     }
 
+
     /* Result open */
+
     .drop.dropdown-open .dropdown ul {
         display: block;
     }
 
+
     /* More open */
+
     .drop1.dropdown-open .dropdown1 ul {
         display: block;
     }
 
 
-    /* Dropdown links */
+    /* Dropdown items */
+
     .dropdown ul li,
     .dropdown1 ul li {
         width: 100%;
@@ -386,9 +470,38 @@ gap: 20px;
         width: 100%;
         padding: 8px 0;
         text-align: center;
+        color: black;
     }
 
-     .searchbox {
+
+    /* =========================
+       SEARCH + MENU ICON
+       ========================= */
+
+    .search {
+        width: 85%;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    .search .toggle-icon {
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    .search .cross-icon {
+        display: none;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    /* =========================
+       SEARCH BOX
+       ========================= */
+
+    .searchbox {
         height: 60px;
         gap: 10px;
     }
@@ -397,6 +510,7 @@ gap: 20px;
         width: 65%;
         height: 38px;
     }
+
     .inputbox input {
         width: 85%;
     }
@@ -409,14 +523,16 @@ gap: 20px;
     .searchbox i {
         font-size: 25px;
     }
+
+
     /* =========================
        FOOTER
        ========================= */
 
     .footerbox {
         width: 100%;
-        height: auto;
         min-height: 80px;
+        height: auto;
         padding: 20px 15px;
         margin: 20px 0;
         text-align: center;
@@ -425,4 +541,5 @@ gap: 20px;
     .footerbox a {
         font-size: 16px;
     }
+
 }
