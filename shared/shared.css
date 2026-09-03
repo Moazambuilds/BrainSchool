@@ -1,6 +1,7 @@
 body{
     margin:0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 .header{
     width: 100%;
@@ -11,6 +12,7 @@ body{
     left: 0%;
     z-index: 999;
     transition: 0.3s;
+    border: 2px solid black;
     
 }
 .header.scrolled{
@@ -31,7 +33,7 @@ body{
   
 }
 .logo img{
-    height: 50px; 
+    height: 80%; 
     padding: 8px 0 0 30px;
 }
 .text{
