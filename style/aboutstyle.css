@@ -1,59 +1,76 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.container2{
+
+.container2 {
     width: 100%;
     height: 570px;
-  
 }
-.container2 img{
+
+.container2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.aboutbox{
+
+.aboutbox {
     width: 70%;
-    min-height: 500px;
-    height: auto;
-    gap: 30px;
+    min-height: 450px;
     margin: 80px auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
+    gap: 30px;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.395);
 }
+
 .aboutimg {
-    width: 45%;
+    flex: 1;
     height: auto;
-    padding-top: 30px;
-}
-.abouttext{
-    width: 45%;
-    height: auto;
-    padding:10px; 
-}
-.abouttext h1{
-   text-align: center;
-}
-.abouttext p{
-    font-size: 20px;
-    line-height: 25px;
-}
-.aboutimg img{
-    width: 100%;
-    height: 400px;
-    padding: 10px;
-    
-}
-hr{
-    margin-top: 100px;
-    width: 80%;
-    height: 3px;
-    background-color: black;
-    border: none;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 
-@media (max-width: 768px) {
+.aboutimg img {
+    width: 100%;
+    height: auto;
+}
+
+.abouttext {
+    flex: 1;
+    height: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.abouttext h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.abouttext p {
+    font-size: 20px;
+}
+
+hr {
+    width: 80%;
+    height: 3px;
+    margin-top: 100px;
+    border: none;
+    background-color: black;
+}
+
+@media (max-width: 992px) {
 
     .container2 {
         height: 350px;
@@ -65,33 +82,33 @@ hr{
     }
 
     .aboutbox {
-        width: 90%;
-        height: auto;
+        width: 70%;
+        min-height: 0;
+        margin: 50px auto;
+        padding: 20px;
         flex-direction: column;
         gap: 20px;
-        margin: 50px auto;
-        padding: 20px 0;
     }
 
     .aboutimg {
         width: 85%;
-        height: auto;
-        padding-top: 10px;
+        flex: none;
+        padding: 30px;
     }
 
     .aboutimg img {
         width: 100%;
         height: auto;
-        padding: 0;
     }
 
     .abouttext {
-        width: 85%;
-        height: auto;
+        width: 100%;
+        flex: none;
         padding: 20px;
     }
+
     .abouttext p {
-        font-size: 17px;
+        font-size: 20px;
         line-height: 24px;
     }
 
@@ -99,6 +116,4 @@ hr{
         width: 90%;
         margin-top: 50px;
     }
-
-  
 }
