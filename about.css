@@ -1,0 +1,125 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333333;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #1a365d, #2b4c80);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+/* Main Section Card Layout */
+section {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #1a365d;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+/* Directors Section Layout */
+.director-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.director {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.director:hover {
+    transform: translateY(-5px);
+}
+
+/* Updated Director Image Frame Fix */
+.director img {
+    width: 180px;
+    height: 220px;            /* Height barha di taakay portrait look aaye */
+    object-fit: cover;
+    object-position: top;     /* Focus hamesha sar (head) par rahega */
+    border-radius: 10px;      /* Rounded rectangle frame */
+    border: 3px solid #1a365d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.director h3 {
+    margin-top: 15px;
+    color: #1a365d;
+    font-size: 1.1rem;
+}
+
+/* Signature Styling */
+.signature {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed #cbd5e0;
+    font-style: italic;
+    color: #2d3748;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #cbd5e0;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #a0aec0;
+}
