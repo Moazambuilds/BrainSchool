@@ -279,26 +279,7 @@ a {
     line-height: 1.6;
 }
 
-/* FOOTER */
-footer {
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
-    background: #07152d;
-}
 
-footer h3 {
-    margin-bottom: 12px;
-}
-
-footer p {
-    color: #aebbd0;
-}
-
-.copyright {
-    margin-top: 25px;
-    font-size: 14px;
-}
 
 /* MOBILE */
 @media (max-width: 768px) {
