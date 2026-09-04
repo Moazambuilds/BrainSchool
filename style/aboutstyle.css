@@ -1,67 +1,88 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 .container2{
     width: 100%;
-    height: 570px;
-  
-}
-.container2 img{
+    height: 70vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Assest/about3.jpeg");
+    background-size: cover;
+    background-position: center;}
+.textbox{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-.aboutbox{
-    width: 70%;
-    min-height: 500px;
-    gap: 30px;
-    margin: 80px auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.395);
+    color: white;
 }
-.aboutimg {
-    width: 45%;
-    height: auto;
-    padding: 30px;
+.textbox h1{
+    font-size: 100px;
+    margin-bottom: 20px;
 }
-.abouttext{
+.textbox p{
+    font-size: 25px;
     width: 50%;
-    height: auto;
-    padding:10px; 
-    
+    text-align: center;
 }
-.abouttext h1{
-   text-align: center;
+.aboutbox{
+    width: 90%;
+    max-width: 1200px;
+    min-height: 300px;
+    display: flex;
+    margin: 80px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.234);
 }
-.abouttext p{
-    font-size: 20px;
-    line-height: 25px;
+.aboutimg{
+    width: 50%;
+    padding: 30px;
 }
 .aboutimg img{
     width: 100%;
     height: auto;
-    padding: 10px;
+    display: block;
+}
+.abouttext{
+    width: 50%;
+    padding: 40px;
+    background-color: rgb(39, 76, 119);
+    color: white;
     
+}
+.abouttext h1{
+   font-size: clamp(25px,3vh,40px);
+   padding-bottom: 30px;
+}
+.abouttext p{
+   font-size: clamp(25px,2vh,40px);
 }
 .leadership{
     width: 100%;
-    height: auto;
-    margin: 20px 0 20px 0; 
+    min-height: 200px;
+    margin: 50px auto;
     text-align: center;
-    padding: 20px 120px;
-    background-color: rgb(8, 21, 45);
+     background-color: rgb(39, 76, 119);
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.395);
+}
+.leadershipbox{
+    width: 64%;
+    height: auto;
+    margin: 20px auto; 
+    text-align: left;
+    padding: 20px 10px;
     color: white;
-    word-spacing: 2px;
-    
+    word-spacing: 2px;  
 }
 .leadership h3{
     font-size: 25px;
+    margin-bottom: 20px;
 }
 .leadership p{
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 25px;
+    line-height: 1.2;
+    font-style: italic;
 }
 .dicheading{  
     width: 80%;
@@ -69,31 +90,39 @@
     text-align: center;
     font-size: 30px;
 }
-.directorbox{
-    width:80%;
-    min-height: 400px;
-    display: grid;
-    grid-template-columns: 40% 40%;  
-    justify-content: space-between;
-    margin: 20px auto;
-    gap: 40px;
+.directorbox {
+    width: 80%;
+    max-width: 1200px;
+    min-height: 250px;
+    display: flex;
+    margin: 30px auto;
+   
 }
-.director{
-    width: 100%;
-    height: auto;
+
+.director {
+    width: 50%;
     text-align: center;
-    box-shadow:  0 0 20px 0 rgba(0, 0, 0, 0.249);
     
 }
-.director img{  
-    width: 100%;
-    height:80%;
+
+.directorimg {
+   width: 100%; 
+   padding-bottom: 20px;
 }
-.name{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+.directorimg img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.454);
+}
+.name h3 {
+    font-size: clamp(25px, 2vw, 30px);
+    padding-bottom: 10px;
+}
+
+.name p {
+    font-size: clamp(20px, 1.5vw, 30px);
+    font-style: italic;
 }
 hr{
     margin-top: 100px;
@@ -102,93 +131,65 @@ hr{
     background-color: black;
     border: none;
 }
-.opensearch{
-    cursor: pointer;
-}
-.searchbox{
-position: absolute;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 70px;
-background-color: rgb(237, 237, 237);
-display: none;
-align-items: center;
-justify-content: center;
-gap: 20px;
-}
-.inputbox{
-    background-color: white;
-    width: 40%;
-    height: 40px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.489);
-}
-.inputbox input{
-    width: 90%;
-    height: 20px;
-    border: none;
-    outline: none;
-    cursor:text;
-}
-.inputbox .fa-magnifying-glass{
-    width: 5%;
-    font-size: 18px;
-    padding-left: 10px;
-    cursor: pointer;
-}
-.searchbox button{
-    padding: 7px 20px;
-    font-size: 16px;
-}
-.searchbox i{
-    font-size: 30px;
-    cursor: pointer;
+span{
+    color: #fca311;
+    font-size: 200px;
 }
 @media (max-width: 768px) {
 
     .container2 {
-        height: 350px;
+        height: 50vh;
     }
 
     .container2 img {
         height: 100%;
         object-fit: cover;
     }
-
-    .aboutbox {
-        width: 80%;
-        height: auto;
-        flex-direction: column;
-        gap: 20px;
-        margin: 50px auto;
-        padding: 20px 0;
+    span{
+        font-size:100px ;
     }
-
+    .textbox h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .textbox p{
+        font-size: 20px;
+        width: 70%;
+    }
+    .aboutbox {
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .leadershipbox{
+        width: 90%;
+    }
     .aboutimg {
-        width: 85%;
-        height: auto;
-        padding-top: 10px;
+        width: 100%;
+        padding: 50px;
     }
 
     .aboutimg img {
         width: 100%;
         height: auto;
-        padding: 0;
     }
 
     .abouttext {
-        width: 85%;
-        height: auto;
+        width: 100%;
         padding: 20px;
     }
     .abouttext p {
-        font-size: 17px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 1.6;
     }
-
+    .directorbox{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .director{
+        width: 80%;
+    }
     hr {
         width: 90%;
         margin-top: 50px;
