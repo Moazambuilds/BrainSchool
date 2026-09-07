@@ -1,106 +1,157 @@
-/* =========================
-   GLOBAL
-   ========================= */
+
+/* =========================================================
+   1. GLOBAL
+========================================================= */
 
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
+/* =========================================================
+   2. HEADER
+========================================================= */
 
 .header {
     width: 100%;
-    height: 70px;
+    height: 120px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     transition: 0.3s;
+    
 }
 
-.header.scrolled {
+
+/* =========================================================
+   3. DESKTOP HEADER - TOP ROW
+========================================================= */
+
+.logobox {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
 }
 
-.header.scrolled .menu li a {
-    color: black;
-}
 
-.header.scrolled .text,
-.header.scrolled .opensearch,
-.header.scrolled .toggle-icon,
-.header.scrolled .cross-icon {
-    color: black;
-}
+/* -------------------------
+   Desktop Logo
+------------------------- */
 
-.header.scrolled .menu li a.active {
-    color: white;
-}
-
-
-/* =========================
-   CONTAINER
-   ========================= */
-
-.container {
-    width: 100%;
+.logo-box {
+    width: 40%;
     height: 100%;
-    display: flex;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    
+}
+
+.logo-box img {
+    height: 100%;
 }
 
 
-/* =========================
-   LOGO
-   ========================= */
+/* -------------------------
+   Desktop Admission Button
+------------------------- */
+
+.admission-btn1 {
+    width: 40%;
+    height: 100%;
+    
+    justify-content: end;
+    display: flex;
+    align-items: center;
+}
+
+.admission-btn1 button {
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    margin: 0%;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   4. MOBILE HEADER ELEMENTS
+========================================================= */
+
+
+/* -------------------------
+   Mobile Logo
+------------------------- */
 
 .logo {
+    display: none;
     width: 8%;
     height: 100%;
+    padding: 15px;
 }
 
 .logo img {
     height: 50px;
-    padding: 12px 0 0 30px;
 }
 
 
-/* =========================
-   SCHOOL NAME
-   ========================= */
+/* -------------------------
+   Mobile Admission Button
+------------------------- */
 
-.text {
-    width: 25%;
-    height: 100%;
+.admission-btn2 {
+    display: none;
+}
+
+
+/* =========================================================
+   5. NAVIGATION / MENU
+========================================================= */
+
+.container {
+    width: 100%;
+    height: 40px;
     display: flex;
+    box-sizing: border-box;
     align-items: center;
-    color: white;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
-
-
-/* =========================
-   MENU
-   ========================= */
 
 .menu {
-    width: 65%;
+    
+    min-width: 55%;
     height: 100%;
     display: flex;
+    justify-content: center;
     position: relative;
+    margin-right: 10px;
 }
+
+
+/* -------------------------
+   Menu List
+------------------------- */
 
 .menu ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
+    
 }
+
+
+/* -------------------------
+   Menu Links
+------------------------- */
 
 .menu li a {
     display: block;
@@ -108,6 +159,7 @@ body {
     color: white;
     font-size: 16px;
     text-decoration: none;
+    font-family: Arial, sans-serif;
 }
 
 .menu li a:hover {
@@ -115,18 +167,18 @@ body {
 }
 
 
-/* =========================
-   DROPDOWN ICON
-   ========================= */
+/* -------------------------
+   Dropdown Icon
+------------------------- */
 
 .header-icon {
     padding-left: 10px;
 }
 
 
-/* =========================
-   RESULT DROPDOWN
-   ========================= */
+/* =========================================================
+   6. RESULT DROPDOWN
+========================================================= */
 
 .dropdown {
     position: absolute;
@@ -152,13 +204,12 @@ body {
 }
 
 
-/* =========================
-   MORE DROPDOWN
-   ========================= */
+/* =========================================================
+   7. MORE DROPDOWN
+========================================================= */
 
 .dropdown1 {
     position: absolute;
-    left: 75%;
 }
 
 .dropdown1 ul {
@@ -177,7 +228,9 @@ body {
 }
 
 
-/* Dropdown links */
+/* -------------------------
+   Dropdown Links
+------------------------- */
 
 .dropdown ul li a,
 .dropdown1 ul li a {
@@ -185,9 +238,9 @@ body {
 }
 
 
-/* =========================
-   ACTIVE LINK
-   ========================= */
+/* =========================================================
+   8. ACTIVE LINK
+========================================================= */
 
 .menu a.active {
     color: white;
@@ -197,9 +250,9 @@ body {
 }
 
 
-/* =========================
-   SEARCH
-   ========================= */
+/* =========================================================
+   9. SEARCH
+========================================================= */
 
 .search {
     width: 5%;
@@ -208,18 +261,34 @@ body {
     align-items: center;
     gap: 10px;
     padding-right: 10px;
+    
 }
+
+
+/* -------------------------
+   Search Toggle Icon
+------------------------- */
 
 .search .toggle-icon {
     display: none;
     cursor: pointer;
 }
 
+
+/* -------------------------
+   Close Icon
+------------------------- */
+
 .search .cross-icon {
     display: none;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
+
+
+/* -------------------------
+   Search Open Icon
+------------------------- */
 
 .opensearch {
     color: white;
@@ -227,9 +296,9 @@ body {
 }
 
 
-/* =========================
-   SEARCH BOX
-   ========================= */
+/* =========================================================
+   10. SEARCH BOX
+========================================================= */
 
 .searchbox {
     position: absolute;
@@ -241,68 +310,147 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: rgb(237, 237, 237);
+    background-color: white;
 }
+
+
+/* -------------------------
+   Search Input Container
+------------------------- */
 
 .inputbox {
     width: 40%;
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    background-color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.489);
+    
+    
 }
+
+
+/* -------------------------
+   Search Input
+------------------------- */
 
 .inputbox input {
     width: 90%;
-    height: 20px;
+    height: 100%;
     border: none;
+    border-bottom: 2px solid black;
     outline: none;
     cursor: text;
+    background-color: transparent;
+    font-size: 18px;
+    padding-left: 5px;
 }
 
-.inputbox .fa-magnifying-glass {
-    width: 5%;
-    padding-left: 10px;
-    font-size: 18px;
-    cursor: pointer;
-}
+/* -------------------------
+   Search Icon
+------------------------- */
+/* -------------------------
+   Search Button
+------------------------- */
 
 .searchbox button {
     padding: 7px 20px;
     font-size: 16px;
-}
-
-.searchbox i {
-    font-size: 30px;
+    background-color:dodgerblue ;
+    border: none;
+    color: white;
     cursor: pointer;
 }
+
+
+/* -------------------------
+   Search Close Icon
+------------------------- */
+
+.searchbox i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   11. SCROLLED HEADER
+========================================================= */
+
+.header.scrolled .menu li a {
+    color: white;
+}
+
+.header.scrolled .container {
+    background-color: rgb(39, 76, 119);
+}
+
+.header.scrolled .text,
+.header.scrolled .opensearch,
+.header.scrolled .toggle-icon,
+.header.scrolled .cross-icon {
+    color: white;
+}
+
+.header.scrolled .menu li a.active {
+    color: white;
+}
+
+
+/* =========================================================
+   12. FOOTER
+========================================================= */
+
 footer {
     padding: 50px 20px;
     text-align: center;
     color: white;
-    background:rgb(39, 76, 119) ;
+    background: rgb(39, 76, 119);
 }
 
 footer h3 {
     margin-bottom: 12px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
 }
 
 footer p {
     color: #aebbd0;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .copyright {
     margin-top: 25px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
-/* =========================
-   DESKTOP DROPDOWN
-   ========================= */
 
-@media (min-width: 993px) {
+/* -------------------------
+   Social Links
+------------------------- */
+
+.sociallink {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sociallink a img {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.368);
+}
+
+
+/* =========================================================
+   13. DESKTOP DROPDOWN
+========================================================= */
+
+@media (min-width: 992px) {
 
     .drop:hover .dropdown ul {
         display: block;
@@ -315,89 +463,120 @@ footer p {
 }
 
 
-/* =========================
-   1200px
-   ========================= */
-
-@media (max-width: 1200px) {
-
-    .logo {
-        width: 8%;
-    }
-
-    .text {
-        width: 25%;
-        font-size: 14px;
-    }
-
-    .menu {
-        width: 80%;
-    }
-
-    .search {
-        width: 2%;
-    }
-
-}
-
-
-/* =========================
-   1100px
-   ========================= */
+/* =========================================================
+   14. 1100px
+========================================================= */
 
 @media (max-width: 1100px) {
 
-    .logo {
-        width: 18%;
-    }
-
-    .text {
-        display: none;
-    }
-
-    .menu {
-        width: 78%;
-    }
-
-    .search {
-        width: 5%;
+    .menu ul {
+        gap: 30px;
     }
 
 }
 
 
-/* =========================
-   MOBILE / TABLET
-   ========================= */
+/* =========================================================
+   15. MOBILE / TABLET - 992px
+========================================================= */
 
 @media (max-width: 992px) {
 
-    /* Container */
+    /* -------------------------
+       Header
+    ------------------------- */
 
-    .container {
-        align-items: center;
+    .header {
+        height: 90px;
     }
 
 
-    /* Logo */
+    /* -------------------------
+       Hide Desktop Header
+    ------------------------- */
+
+    .logobox {
+        display: none;
+    }
+
+
+    /* -------------------------
+       Mobile Container
+    ------------------------- */
+
+    .container {
+        background-color: white;
+        height: 90px;
+    }
+
+
+    /* -------------------------
+       Scrolled Header
+    ------------------------- */
+
+    .header.scrolled .menu li a {
+        color: black;
+    }
+
+    .header.scrolled .container {
+        background-color: white;
+    }
+
+    .header.scrolled .text,
+    .header.scrolled .opensearch,
+    .header.scrolled .toggle-icon,
+    .header.scrolled .cross-icon {
+        color: black;
+    }
+
+    .header.scrolled .menu li a.active {
+        color: white;
+    }
+
+
+    /* -------------------------
+       Mobile Logo
+    ------------------------- */
 
     .logo {
-        width: 15%;
+        width: 35%;
+        display: flex;
+        align-items: center;
+        padding: 0%;
     }
 
     .logo img {
-        margin: 5px auto;
+        width: auto;
+        height: 80%;
     }
 
 
-    /* School name */
+    /* -------------------------
+       Mobile Admission Button
+    ------------------------- */
 
-    .text {
-        width: 70%;
+    .admission-btn2 {
+        display: flex;
+        justify-content: end;
+        width: 35%;
+     
+    }
+
+    .admission-btn2 button {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+        background-color: dodgerblue;
+        border: none;
+        margin: 0%;
+        cursor: pointer;
     }
 
 
-    /* Menu */
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
     .menu {
         width: 100%;
@@ -437,9 +616,9 @@ footer p {
     }
 
 
-    /* =========================
+    /* =====================================================
        MOBILE DROPDOWN
-       ========================= */
+    ===================================================== */
 
     .dropdown,
     .dropdown1 {
@@ -460,21 +639,27 @@ footer p {
     }
 
 
-    /* Result open */
+    /* -------------------------
+       Result Dropdown Open
+    ------------------------- */
 
     .drop.dropdown-open .dropdown ul {
         display: block;
     }
 
 
-    /* More open */
+    /* -------------------------
+       More Dropdown Open
+    ------------------------- */
 
     .drop1.dropdown-open .dropdown1 ul {
         display: block;
     }
 
 
-    /* Dropdown items */
+    /* -------------------------
+       Dropdown Items
+    ------------------------- */
 
     .dropdown ul li,
     .dropdown1 ul li {
@@ -492,37 +677,44 @@ footer p {
     }
 
 
-    /* =========================
-       SEARCH + MENU ICON
-       ========================= */
+    /* =====================================================
+       MOBILE SEARCH + MENU ICON
+    ===================================================== */
 
     .search {
-        width: 85%;
+        width: 10%;
         height: auto;
         justify-content: flex-end;
     }
 
+    .opensearch {
+        color: black;
+        font-size: 20px;
+    }
+
     .search .toggle-icon {
         display: block;
-        color: white;
+        color: black;
         cursor: pointer;
+        font-size: 20px;
     }
 
     .search .cross-icon {
         display: none;
-        color: white;
+        color: black;
         cursor: pointer;
+        font-size: 20px;
     }
 
 
-    /* =========================
-       SEARCH BOX
-       ========================= */
+    /* =====================================================
+       MOBILE SEARCH BOX
+    ===================================================== */
 
     .searchbox {
-        height: 60px;
+        height: 100%;
         gap: 10px;
-    }
+        background-color:none;
 
     .inputbox {
         width: 65%;
@@ -539,13 +731,105 @@ footer p {
     }
 
     .searchbox i {
-        font-size: 25px;
+        font-size: 24px;
     }
 
+    }}
 
-    /* =========================
-       FOOTER
-       ========================= */
 
+/* =========================================================
+   16. 786px
+========================================================= */
+
+@media (max-width: 786px) {
+
+    .header {
+        height: 70px;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .search {
+        width: 15%;
+    }
+
+    .opensearch {
+        font-size: 20px;
+    }
+
+    .toggle-icon {
+        font-size: 20px;
+    }
+   .cross-icon{
+    font-size: 20px;
+   }
+}
+
+
+/* =========================================================
+   17. 500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .header {
+        height: 60px;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .admission-btn2 button {
+        padding: 6px;
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    .opensearch {
+        font-size: 15px;
+    }
+
+    .search .toggle-icon {
+        font-size: 15px;
+    }
+    .search .cross-icon{
+        font-size:15px;
+    }
+}
+
+
+/* =========================================================
+   18. 386px
+========================================================= */
+
+@media (max-width: 386px) {
+
+    .header {
+        height: 50px;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .logo {
+        width: 65%;
+    }
+
+    .admission-btn2 {
+        display: none;
+    }
+
+    .opensearch {
+        font-size: 16px;
+    }
+
+    .search .toggle-icon {
+        font-size: 16px;
+    }
 
 }
+

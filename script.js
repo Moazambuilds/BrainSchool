@@ -1,17 +1,24 @@
-// Reload header and footer first
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const headerMount = document.getElementById("header");
     const footerMount = document.getElementById("footer");
 
+    // =========================
+    // HEADER
+    // =========================
+
     function initHeaderInteractions() {
+
         const toggleIcon = document.querySelector(".toggle-icon");
         const menu = document.querySelector(".menu");
         const cross = document.querySelector(".cross-icon");
 
+        // Mobile menu
         if (toggleIcon && menu && cross) {
+
             toggleIcon.addEventListener("click", function () {
-                menu.classList.toggle("active");
+                menu.classList.add("active");
                 toggleIcon.style.display = "none";
                 cross.style.display = "block";
             });
@@ -23,167 +30,190 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // =========================
-        // DROPDOWN
-        // =========================
+        // Dropdown
         const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-        dropdownToggles.forEach(function (toggle) {
-            toggle.addEventListener("click", function (event) {
-                if (window.innerWidth <= 992) {
+
+        dropdownToggles.forEach(function (toggle1) {
+
+            toggle1.addEventListener("click", function (event) {
+
+               
+
                     event.preventDefault();
-                    const parent = toggle.parentElement;
-                    if (parent) parent.classList.toggle("dropdown-open");
-                }
+
+                    const parent = toggle1.parentElement;
+
+                    if (parent) {
+                        parent.classList.toggle("dropdown-open");
+                    }
+                
             });
         });
 
-        // Header load hone ke BAAD ye code chalega
+        // Active menu link
         const links = document.querySelectorAll(".menu ul a:not(.no-active)");
-        links.forEach(link => {
+
+        links.forEach(function (link) {
+
             if (link.href === window.location.href) {
                 link.classList.add("active");
             }
         });
 
-        const searchopen = document.querySelector(".opensearch");
-        const searchbox1 = document.querySelector(".searchbox");
-        const searchclose = document.querySelector(".closesearch");
+        // Search
+        const searchOpen = document.querySelector(".opensearch");
+        const searchBox = document.querySelector(".searchbox");
+        const searchClose = document.querySelector(".closesearch");
 
-        if (searchopen && searchbox1) {
-            searchopen.addEventListener("click", function () {
-                searchbox1.style.display = "flex";
+        if (searchOpen && searchBox) {
+
+            searchOpen.addEventListener("click", function () {
+                searchBox.style.display = "flex";
             });
         }
 
-        if (searchclose && searchbox1) {
-            searchclose.addEventListener("click", function () {
-                searchbox1.style.display = "none";
+        if (searchClose && searchBox) {
+
+            searchClose.addEventListener("click", function () {
+                searchBox.style.display = "none";
             });
         }
     }
 
+
+    // Load Header
     if (headerMount) {
+
         fetch("/shared/header.html")
             .then(response => response.text())
             .then(data => {
+
                 headerMount.innerHTML = data;
+
                 initHeaderInteractions();
             })
             .catch(() => {
-                // ignore header load failures
+                console.log("Header could not be loaded.");
             });
     }
 
+
+    // Load Footer
     if (footerMount) {
+
         fetch("/shared/footer.html")
             .then(response => response.text())
             .then(data => {
+
                 footerMount.innerHTML = data;
             })
             .catch(() => {
-                // ignore footer load failures
+                console.log("Footer could not be loaded.");
             });
     }
+const filterButtons = document.querySelectorAll(".filterbox .btn");
+const galleryGrids = document.querySelectorAll(".gallery-grid");
+const galleryItems = document.querySelectorAll(".gallery-item");
 
-    
-    fetch("/shared/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+        // Large class remove
+        galleryItems.forEach(item => {
+            item.classList.remove("large");
         });
 
+        // Grids show / hide
+        galleryGrids.forEach(grid => {
 
-const slides = document.querySelector(".slides");
-const images = document.querySelectorAll(".slides img");
+            const category = grid.dataset.category;
 
-const nextButton = document.querySelector(".next");
-const prevButton = document.querySelector(".prev");
+            if (filter === "all" || category === filter) {
+                grid.style.display = "grid";
+            } else {
+                grid.style.display = "none";
+            }
 
+        });
+
+        // Images show / hide
+        galleryItems.forEach(item => {
+
+            if (filter === "all" || item.dataset.category === filter) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+
+const images = document.querySelectorAll(".gallery-item img");
+const modal = document.getElementById("imageModal");
+const largeImage = document.getElementById("largeImage");
+const close = document.querySelector(".close");
+const next =document.querySelector(".next");
+const prevs =document.querySelector(".prevs");
+
+images.forEach(function(image) {
+
+    image.addEventListener("click", function() {
+
+        modal.style.display = "flex";
+        largeImage.src = image.src;
+
+    });
 let index = 0;
-let sliderInterval;
+    next.addEventListener("click",()=>{
+        index++;
+        if(index >= images.length){
+      index = 0;
+        }
 
-function nextSlide() {
+        
+    largeImage.src=images[index].src;
+});
 
-    index++;
-
-    slides.style.transition = "transform 0.5s ease";
-    slides.style.transform = `translateX(-${index * 100}%)`;
-
-    // Last duplicate image par pohanch gaye
-    if (index === images.length - 1) {
-
-        setTimeout(function () {
-
-            slides.style.transition = "none";
-
-            index = 0;
-
-            slides.style.transform = "translateX(0)";
-
-        }, 500);
+prevs.addEventListener("click",()=>{
+    index--;
+    if(index < 0)
+    {
+        index=images.length-1;
     }
-}
-
-
-// Previous slide
-function previousSlide() {
-
-    if (index > 0) {
-
-        index--;
-
-        slides.style.transition = "transform 0.5s ease";
-        slides.style.transform = `translateX(-${index * 100}%)`;
-
-    }
-}
-
-
-// Auto slider
-sliderInterval = setInterval(nextSlide, 3000);
-
-
-// Next arrow
-nextButton.addEventListener("click", function () {
-
-    nextSlide();
-
+    largeImage.src=images[index].src;
 });
-
-
-// Previous arrow
-prevButton.addEventListener("click", function () {
-
-    previousSlide();
-
-});
-
-
-// Mouse slider par aaye → stop
-document.querySelector(".slider").addEventListener("mouseenter", function () {
-
-    clearInterval(sliderInterval);
-
-});
-
-
-// Mouse slider se bahar jaye → dobara start
-document.querySelector(".slider").addEventListener("mouseleave", function () {
-
-    sliderInterval = setInterval(nextSlide, 3000);
-
+close.addEventListener("click", function() {
+    modal.style.display = "none";
 });
 });
-// Header scroll
+
+
+
+});
+// =========================
+// HEADER SCROLL
+// =========================
+
 window.addEventListener("scroll", function () {
 
     const header = document.querySelector(".header");
+
     if (!header) return;
 
     if (window.scrollY > 50) {
+
         header.classList.add("scrolled");
+
     } else {
+
         header.classList.remove("scrolled");
     }
-
 });
+

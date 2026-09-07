@@ -1,88 +1,482 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="/style/gallery.css" >
-    <link rel="stylesheet" href="/shared/shared.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-   <script src="/script.js"></script>
-    <title>gallery page</title>
+
+    <link rel="stylesheet" href="/style/gallery.css">
+    <link rel="stylesheet" href="/shared/shared.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="/script.js"></script>
+
+    <title>Gallery Page</title>
 </head>
+
 <body>
+
+    <!-- Header -->
     <header>
         <div id="header"></div>
     </header>
- 
- <main>
- <div class="container2">
-    <img src="/Assest/gallery.png" alt="">
- </div>
- <hr>
- <div class="dicheading">
-    <h1>Directors</h1>
- </div>
- <div class="directorbox">
-    <div class="director"><img src="/Assest/director1.png" alt="director pic">
-        <h3>Malik Abbas Ahmed </h3>
-    </div>
-    <div class="director"><img src="/Assest/director2.png" alt="director pic">
-    <h3>Saif  Ullah Butt</h3></div>
- </div>
- <hr>
- <div class="schoolheading">
-    <h1>Our Learning Environment</h1>
- </div>
- <!--<div class="schoolbox">
-    <div class="schoolitem"><img src="/Assest/schoolpic1.png" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/schoolpic2png.jpg" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/biolab.png" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/biolab2.png" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/computerlabpic.png" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/officepic.png" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/prayerarear.png" alt=""></div>
-    <div class="schoolitem"><img src="/Assest/canteen.png" alt=""></div>
- </div>-->
- <div class="slider">
 
-    <div class="slides">
-        <img src="/Assest/schoolpic1.png" alt="">
-    <img src="/Assest/schoolpic2png.jpg" alt="">
-    <img src="/Assest/biolab.png" alt="">
-    <img src="/Assest/biolab2.png" alt="">
-    <img src="/Assest/computerlabpic.png" alt="">
-    <img src="/Assest/officepic.png" alt="">
-    <img src="/Assest/prayerarear.png" alt="">
-    <img src="/Assest/canteen.png" alt="">
-     <img src="/Assest/schoolpic1.png" alt="">
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h2>Our School Gallery</h2>
+
+                <p>
+                    Explore the memorable moments, exciting activities,
+                    achievements, special events, and experiences that make
+                    life at BrainSchool meaningful and unforgettable.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Gallery Filters -->
+        <section class="gallery-section">
+
+            <div class="filterbox">
+
+                <button class="btn" data-filter="all">
+                    All
+                </button>
+
+                <button class="btn" data-filter="events">
+                    Events
+                </button>
+
+                <button class="btn" data-filter="sports">
+                    Sports
+                </button>
+
+                <button class="btn" data-filter="campus">
+                    Campus
+                </button>
+
+                <button class="btn" data-filter="trips">
+                    Trips
+                </button>
+
+            </div>
+
+
+           <!-- ================= SPORTS GRID ================= -->
+<div class="heading"> <h3 > Our Gallery</h3></div>
+<div class="gallery-grid" data-category="sports">
+    <div class="gallery-item large show" data-category="sports">
+        <img src="/Assest/gallery/all/sport_6.webp"
+            alt="School Sports Activity">
     </div>
 
-    <button class="prev">❮</button>
-    <button class="next">❯</button>
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_1.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item show" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_2.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_3.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_4.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_5.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_7.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_8.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_9.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_10.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_11.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_12.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_13.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_14.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_15.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_16.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_17.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item show" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_18.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_19.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_20.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_21.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_22.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item show" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_23.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_24.webp"
+            alt="School Sports Activity">
+    </div>
+
+    <div class="gallery-item show" data-category="sports">
+        <img src="/Assest/gallery/sports/sport_25.webp"
+            alt="School Sports Activity">
+    </div>
 
 </div>
- <hr>
-  <div class="awardheading">
-    <h1>Awards & Achievements</h1>
- </div>
- <div class="awardbox">
-            <div class="award"><img src="/Assest/award1.png" alt="director pic">
+
+         <!-- ================= EVENTS GRID ================= -->
+<div class="gallery-grid" data-category="events">
+
+    <div class="gallery-item " data-category="events">
+        <img src="/Assest/gallery/events/Photo_1.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_2.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item  show" data-category="events">
+        <img src="/Assest/gallery/events/Photo_3.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item show" data-category="events">
+        <img src="/Assest/gallery/events/Photo_4.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_5.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_6.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_7.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_8.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_9.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_10.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_11.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_12.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item " data-category="events">
+        <img src="/Assest/gallery/events/Photo_13.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item " data-category="events">
+        <img src="/Assest/gallery/events/Photo_14.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_15.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_16.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item " data-category="events">
+        <img src="/Assest/gallery/events/Photo_17.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item " data-category="events">
+        <img src="/Assest/gallery/events/Photo_18.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_19.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/Photo_20.webp" alt="School Event">
+    </div>
+
+    <div class="gallery-item large show" data-category="events">
+        <img src="/Assest/gallery/events/photo_21.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_22.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_23.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_24.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_25.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_26.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_27.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item show" data-category="events">
+        <img src="/Assest/gallery/events/photo_28.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item" data-category="events">
+        <img src="/Assest/gallery/events/photo_29.png" alt="School Event">
+    </div>
+
+    <div class="gallery-item  show " data-category="events">
+        <img src="/Assest/gallery/events/photo_30.png" alt="School Event">
+    </div>
+
+</div>   
+<!-- Full screen image -->
+<div class="image-modal" id="imageModal">
+   <span class="close">&times;</span>
+   <button class="prevs">&#10094;</button>
+   <button class="next">&#10095;</button>
+
+    <img id="largeImage">
+</div>
+<!-- ================= TRIPS GRID ================= -->
+<div class="gallery-grid" data-category="trips">
+
+    <div class="gallery-item large show" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_1.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_2.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_3.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item show" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_4.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_5.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_6.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_7.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_8.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item show" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_9.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_10.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_11.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item show" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_12.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_13.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_14.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_15.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_16.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_17.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item show" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_18.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_19.webp"
+            alt="School Trip">
+    </div>
+
+    <div class="gallery-item" data-category="trips">
+        <img src="/Assest/gallery/trip/trip_20.webp"
+            alt="School Trip">
+    </div>
+
+</div>
+
+        </section>
+
+
+        <!-- Gallery Description -->
+        <section class="gallery-text">
+
+            <div class="textbox">
+
+                <h3>Memories That Matter</h3>
+
+                <p>
+                    Every picture tells a story, and every story reflects a
+                    moment that becomes a part of our school’s journey.
+                    From joyful celebrations and exciting school trips
+                    to engaging classroom activities, sports competitions,
+                    cultural events, creative projects, and memorable
+                    achievements, our gallery brings these special moments
+                    to life.
+                </p>
+
+                <a href="#">Learn More →</a>
+
             </div>
-            <div class="award"><img src="/Assest/award.png" alt="director pic">
-        </div>
- </div>
- <hr>
- <div class="cultureheading">
-    <h1>Culture Day</h1>
- </div>
- <div class="culturebox">
-            <div class="culture"><img src="/Assest/cultureday.png" alt="director pic">
-            </div>
-            <div class="culture"><img src="/Assest/cultureday2.png" alt="director pic">
-                </div>
- </div>
- </main>
- <hr>
- <footer><div id="footer"></div></footer>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <hr>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
 </body>
+
 </html>
+```

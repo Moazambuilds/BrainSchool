@@ -6,7 +6,7 @@
 
 .container2 {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Assest/about3.jpeg");
     background-size: cover;
     background-position: center;}
@@ -22,15 +22,17 @@
 .textbox h1{
     font-size: 100px;
     margin-bottom: 20px;
+    font-family: Arial, sans-serif;
 }
 .textbox p{
     font-size: 25px;
     width: 50%;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 .aboutbox{
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
+   
     min-height: 300px;
     display: flex;
     margin: 80px auto;
@@ -53,11 +55,13 @@
     
 }
 .abouttext h1{
+    font-family: Arial, sans-serif;
    font-size: clamp(25px,3vh,40px);
    padding-bottom: 30px;
 }
 .abouttext p{
-   font-size: clamp(25px,2vh,40px);
+    font-family: Arial, sans-serif;
+   font-size: clamp(22px,2vh,30px);
 }
 .leadership{
     width: 100%;
@@ -68,7 +72,8 @@
      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.395);
 }
 .leadershipbox{
-    width: 64%;
+    width: 80%;
+    max-width: 1200px;
     height: auto;
     margin: 20px auto; 
     text-align: left;
@@ -77,13 +82,15 @@
     word-spacing: 2px;  
 }
 .leadership h3{
-    font-size: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 .leadership p{
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.2;
     font-style: italic;
+    font-family: Arial, sans-serif;
 }
 .dicheading{  
     width: 80%;
@@ -119,11 +126,13 @@
 .name h3 {
     font-size: clamp(25px, 2vw, 30px);
     padding-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
 
 .name p {
     font-size: clamp(20px, 1.5vw, 30px);
     font-style: italic;
+    font-family: Arial, sans-serif;
 }
 hr{
     margin-top: 100px;
@@ -134,14 +143,10 @@ hr{
     background-color: black;
 }
 span{
-    color: #fca311;
-    font-size: 200px;
+    color:  #2d8cff;
+    font-size: 150px;
 }
 @media (max-width: 768px) {
-
-    .container2 {
-        height: 50vh;
-    }
 
     .container2 img {
         height: 100%;
@@ -182,8 +187,11 @@ span{
     }
 
     .abouttext p {
-        font-size: 24px;
+        font-size: 18px;
         line-height: 1.6;
+    }
+    .leadershipbox p{
+        font-size: 18px;
     }
     .directorbox{
         flex-direction: column;
