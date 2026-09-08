@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f6ff;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #3366cc;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/* Sections */
+
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #3366cc;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #eef3ff;
+    border: 1px solid #ccd8f5;
+    padding: 15px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #3366cc;
+}
+
+/* Skills */
+
+.skills {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #e8f5e9;
+    border: 1px solid #b7d8ba;
+    padding: 15px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.skill h3 {
+    color: #2e7d32;
+}
+
+/* Message */
+
+.message {
+    text-align: center;
+    background-color: #fff3cd;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
