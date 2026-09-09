@@ -20,9 +20,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 99999;
     transition: 0.3s;
-    
 }
 
 
@@ -47,7 +46,6 @@ body {
 .logo-box {
     width: 40%;
     height: 100%;
-    
 }
 
 .logo-box img {
@@ -62,7 +60,6 @@ body {
 .admission-btn1 {
     width: 40%;
     height: 100%;
-    
     justify-content: end;
     display: flex;
     align-items: center;
@@ -74,8 +71,9 @@ body {
     font-weight: 300;
     color: white;
     background-color: dodgerblue;
+    border-radius: 10px;
     border: none;
-    margin: 0%;
+    margin: 0;
     cursor: pointer;
 }
 
@@ -83,11 +81,6 @@ body {
 /* =========================================================
    4. MOBILE HEADER ELEMENTS
 ========================================================= */
-
-
-/* -------------------------
-   Mobile Logo
-------------------------- */
 
 .logo {
     display: none;
@@ -99,11 +92,6 @@ body {
 .logo img {
     height: 50px;
 }
-
-
-/* -------------------------
-   Mobile Admission Button
-------------------------- */
 
 .admission-btn2 {
     display: none;
@@ -126,7 +114,6 @@ body {
 }
 
 .menu {
-    
     min-width: 55%;
     height: 100%;
     display: flex;
@@ -145,7 +132,6 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    
 }
 
 
@@ -180,18 +166,27 @@ body {
    6. RESULT DROPDOWN
 ========================================================= */
 
+.drop {
+    position: relative;
+}
+
 .dropdown {
     position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100000;
 }
 
 .dropdown ul {
     width: 150px;
     height: 100px;
     padding: 20px 0 0 20px;
-    margin-top: 10px;
+    margin-top: 0;
     display: none;
     background-color: white;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.171);
+    position: relative;
+    z-index: 100001;
 }
 
 .dropdown ul li {
@@ -199,17 +194,20 @@ body {
     margin-top: 10px;
 }
 
-.drop {
-    justify-content: space-between;
-}
-
 
 /* =========================================================
    7. MORE DROPDOWN
 ========================================================= */
 
+.drop1 {
+    position: relative;
+}
+
 .dropdown1 {
     position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100000;
 }
 
 .dropdown1 ul {
@@ -217,9 +215,11 @@ body {
     height: 150px;
     display: none;
     padding: 20px 0 0 20px;
-    margin-top: 10px;
+    margin-top: 0;
     background-color: white;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.215);
+    position: relative;
+    z-index: 100001;
 }
 
 .dropdown1 li {
@@ -235,6 +235,11 @@ body {
 .dropdown ul li a,
 .dropdown1 ul li a {
     color: black;
+}
+
+.dropdown ul li a:hover,
+.dropdown1 ul li a:hover {
+    color: rgb(80, 80, 80);
 }
 
 
@@ -261,7 +266,6 @@ body {
     align-items: center;
     gap: 10px;
     padding-right: 10px;
-    
 }
 
 
@@ -325,8 +329,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    
-    
 }
 
 
@@ -346,9 +348,7 @@ body {
     padding-left: 5px;
 }
 
-/* -------------------------
-   Search Icon
-------------------------- */
+
 /* -------------------------
    Search Button
 ------------------------- */
@@ -356,7 +356,8 @@ body {
 .searchbox button {
     padding: 7px 20px;
     font-size: 16px;
-    background-color:dodgerblue ;
+    background-color: dodgerblue;
+    border-radius: 10px;
     border: none;
     color: white;
     cursor: pointer;
@@ -377,10 +378,14 @@ body {
    11. SCROLLED HEADER
 ========================================================= */
 
-.header.scrolled .menu li a {
-    color: white;
+.header.scrolled .dropdown ul li a,
+.header.scrolled .dropdown1 ul li a {
+    color: black;
 }
-
+.header.scrolled .dropdown ul li a:hover,
+.header.scrolled .dropdown1 ul li a:hover {
+    color: rgb(171, 175, 183);
+}
 .header.scrolled .container {
     background-color: rgb(39, 76, 119);
 }
@@ -389,10 +394,6 @@ body {
 .header.scrolled .opensearch,
 .header.scrolled .toggle-icon,
 .header.scrolled .cross-icon {
-    color: white;
-}
-
-.header.scrolled .menu li a.active {
     color: white;
 }
 
@@ -451,6 +452,24 @@ footer p {
 ========================================================= */
 
 @media (min-width: 992px) {
+
+    .drop,
+    .drop1 {
+        position: relative;
+    }
+
+    .dropdown,
+    .dropdown1 {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100000;
+    }
+
+    .dropdown ul,
+    .dropdown1 ul {
+        margin-top: 0;
+    }
 
     .drop:hover .dropdown ul {
         display: block;
@@ -542,7 +561,7 @@ footer p {
         width: 35%;
         display: flex;
         align-items: center;
-        padding: 0%;
+        padding: 0;
     }
 
     .logo img {
@@ -559,7 +578,6 @@ footer p {
         display: flex;
         justify-content: end;
         width: 35%;
-     
     }
 
     .admission-btn2 button {
@@ -568,8 +586,9 @@ footer p {
         font-weight: 300;
         color: white;
         background-color: dodgerblue;
+        border-radius: 10px;
         border: none;
-        margin: 0%;
+        margin: 0;
         cursor: pointer;
     }
 
@@ -624,6 +643,7 @@ footer p {
     .dropdown1 {
         position: static;
         left: auto;
+        z-index: auto;
     }
 
     .dropdown ul,
@@ -636,6 +656,7 @@ footer p {
         margin: 0;
         background-color: white;
         box-shadow: none;
+        z-index: auto;
     }
 
 
@@ -714,7 +735,8 @@ footer p {
     .searchbox {
         height: 100%;
         gap: 10px;
-        background-color:none;
+        background-color: transparent;
+    }
 
     .inputbox {
         width: 65%;
@@ -734,7 +756,7 @@ footer p {
         font-size: 24px;
     }
 
-    }}
+}
 
 
 /* =========================================================
@@ -762,9 +784,11 @@ footer p {
     .toggle-icon {
         font-size: 20px;
     }
-   .cross-icon{
-    font-size: 20px;
-   }
+
+    .cross-icon {
+        font-size: 20px;
+    }
+
 }
 
 
@@ -795,9 +819,11 @@ footer p {
     .search .toggle-icon {
         font-size: 15px;
     }
-    .search .cross-icon{
-        font-size:15px;
+
+    .search .cross-icon {
+        font-size: 15px;
     }
+
 }
 
 
@@ -832,4 +858,3 @@ footer p {
     }
 
 }
-

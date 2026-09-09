@@ -32,7 +32,7 @@
 }
 .aboutbox{
     width: 80%;
-   
+     max-width: 1200px;
     min-height: 300px;
     display: flex;
     margin: 80px auto;
@@ -40,7 +40,7 @@
 }
 .aboutimg{
     width: 50%;
-    padding: 30px;
+    padding: 50px;
 }
 .aboutimg img{
     width: 100%;
@@ -92,12 +92,7 @@
     font-style: italic;
     font-family: Arial, sans-serif;
 }
-.dicheading{  
-    width: 80%;
-    margin: 60px auto;
-    text-align: center;
-    font-size: 30px;
-}
+
 .directorbox {
     width: 80%;
     max-width: 1200px;
@@ -164,12 +159,12 @@ span{
         width: 70%;
     }
     .aboutbox {
-        width: 90%;
+        width: 80%;
         flex-direction: column;
         gap: 10px;
     }
     .leadershipbox{
-        width: 90%;
+        width: 80%;
     }
     .aboutimg {
         width: 100%;

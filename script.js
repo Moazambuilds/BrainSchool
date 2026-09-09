@@ -154,7 +154,7 @@ filterButtons.forEach(button => {
 
 });
 
-
+//view image on click and move next and prevs
 const images = document.querySelectorAll(".gallery-item img");
 const modal = document.getElementById("imageModal");
 const largeImage = document.getElementById("largeImage");
@@ -194,6 +194,171 @@ close.addEventListener("click", function() {
 });
 });
 
+// Create map
+        const map = L.map("map").setView(
+            [32.15, 74.20],
+            11
+        );
+        // Add OpenStreetMap tiles      
+ L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+    {
+        attribution:
+            '&copy; OpenStreetMap contributors &copy; CARTO'
+    }
+).addTo(map);
+        // ================= CAMPUS DATA =================
+
+        const campuses = [
+
+            {
+                name: "Daska City Campus",
+                address: "Daska",
+                contact: "03268282325",
+                lat: 32.3246,
+                lng: 74.3500
+            },
+
+            {
+                name: "Al-Rehmat Campus",
+                address: "Gujranwala",
+                contact: "03268282324 03268282325 03268282326",
+                lat: 32.1617,
+                lng: 74.1883
+            },
+
+            {
+                name: "Kids & Boys Campus",
+                address: "Gujranwala",
+                contact: "03268282324 03268282325 03268282326",
+                lat: 32.1620,
+                lng: 74.1950
+            },
+
+            {
+                name: "Jinnah Campus",
+                address: "Gujranwala",
+                contact: "03268282321 03268282322 03268282334",
+                lat: 32.1750,
+                lng: 74.2050
+            },
+
+            {
+                name: "Fatima Campus",
+                address: "Gujranwala",
+                contact: "03268282326",
+                lat: 32.1780,
+                lng: 74.1850
+            },
+
+            {
+                name: "Sakina Campus",
+                address: "Gujranwala",
+                contact: "03268282332",
+                lat: 32.1680,
+                lng: 74.2150
+            },
+
+            {
+                name: "Khadija Campus",
+                address: "Daska",
+                contact: "03268282330",
+                lat: 32.3300,
+                lng: 74.3450
+            },
+
+            {
+                name: "Naseem Campus",
+                address: "Daska",
+                contact: "03268282331",
+                lat: 32.3100,
+                lng: 74.3650
+            }
+
+        ];
+        // ================= MARKERS =================
+
+        const markers = [];
+
+        campuses.forEach(function (campus) {
+            // Create marker
+          const marker = L.marker(
+    [campus.lat, campus.lng],
+    {
+        icon: L.divIcon({
+            className: "custom-marker",
+            html: '<i class="fa-solid fa-location-dot"></i>',
+            iconSize: [30, 30],
+            iconAnchor: [15, 30]
+        })
+    }
+).addTo(map);
+
+
+            // Popup content
+            const popup = `
+
+                <div class="info-card">
+
+                    <h3>${campus.name}</h3>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>${campus.address}</span>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>${campus.contact}</span>
+                    </div>
+
+                    <a class="direction-btn"
+                        href="https://www.google.com/maps/dir/?api=1&destination=${campus.lat},${campus.lng}"
+                        target="_blank">
+
+                        <i class="fa-solid fa-location-arrow"></i>
+                        Get Directions
+                    </a>
+                </div>
+            `;
+
+
+            // Attach popup to marker
+            marker.bindPopup(popup);
+
+            // Save marker
+            markers.push(marker);
+
+        });
+
+
+        // ================= CAMPUS CARDS =================
+
+        const cards = document.querySelectorAll(
+            ".campus-card"
+        );
+
+
+        cards.forEach(function (card) {
+
+
+            card.addEventListener("click",function () {
+                    // Get card index
+                    const index = card.dataset.index;
+                    // Get related marker
+                    const marker = markers[index];
+                    // Move map to marker
+                    map.setView(
+                        marker.getLatLng(),
+                        16
+                    );
+                    // Open marker popup
+                    marker.openPopup();
+
+                }
+            );
+
+        });
 
 
 });
@@ -216,4 +381,5 @@ window.addEventListener("scroll", function () {
         header.classList.remove("scrolled");
     }
 });
-
+// api key
+// AIzaSyDQ7o8Pqetc4w06zFsWXDore9_uhcd07C4

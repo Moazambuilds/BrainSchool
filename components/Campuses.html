@@ -1,99 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/campuses.css" >
-    <link rel="stylesheet" href="/shared/shared.css" >
-    <title>Home page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="/script.js"></script>
-  </head>
+
+    <link rel="stylesheet" href="/style/campuses.css">
+
+    <link rel="stylesheet" href="/shared/shared.css">
+
+    <title>Campuses</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+
+
 <body>
- <div id="header"></div>
-  <main>
-    <div class="container2">
-       <img src="/Assest/media.png">
+
+    <!-- Header -->
+    <div id="header"></div>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h2>
+                    <span>Discover</span> Our Campuses
+                </h2>
+
+                <p>
+                    Explore our network of campuses, each designed to provide
+                    students with a safe, inspiring, and supportive learning environment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CAMPUS SECTION ================= -->
+
+        <section>
+
+            <div class="capmus-heading">
+
+                <h2>Find Our Campuses</h2>
+
+                <p>
+                    Explore our campus locations and find the one closest to you.
+                </p>
+
+            </div>
+
+
+            <div class="campus-container">
+
+
+                <!-- ================= MAP ================= -->
+
+                <div class="map-container">
+
+                    <div id="map"></div>
+
+                </div>
+
+
+                <!-- ================= CAMPUS LIST ================= -->
+
+                <div class="campuses-list">
+
+
+                    <div class="campus-card" data-index="0">
+
+                        <h3>Daska City Campus</h3>
+
+                        <p>
+                            Sialkot Road, Gujranwala
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="1">
+
+                        <h3>Al-Rehmat Campus</h3>
+
+                        <p>
+                            Sialkot Road, Gujranwala
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="2">
+
+                        <h3>Kids & Boys Campus</h3>
+
+                        <p>
+                            Sialkot Road, Gujranwala
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="3">
+
+                        <h3>Jinnah Campus</h3>
+
+                        <p>
+                            Sialkot Road, Gujranwala
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="4">
+
+                        <h3>Fatima Campus</h3>
+
+                        <p>
+                            Sialkot Road, Daska
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="5">
+
+                        <h3>Sakina Campus</h3>
+
+                        <p>
+                            Sialkot Road, Daska
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="6">
+
+                        <h3>Khadija Campus</h3>
+
+                        <p>
+                            Sialkot Road, Daska
+                        </p>
+
+                    </div>
+
+
+                    <div class="campus-card" data-index="7">
+
+                        <h3>Naseem Campus</h3>
+
+                        <p>
+                            Sialkot Road, Daska
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+<div class="campus-info-bar">
+
+    <div class="campus-info-item">
+
+        <div class="info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div class="info-content">
+            <h3>8 Campuses</h3>
+            <p>Across Gujranwala & Daska</p>
+        </div>
+
     </div>
-    <div class="headingcontact"><h1>CAMPUSES CONTACTS</h1></div>
-  <div class="contact">
-    <div class="contact12">
-        <h2>Al-Rehmat Campus</h2>
-        <ul>
-          <li>03268282324</li>
-          <li>03268282325</li>
-          <li>03268282326</li>
-        </ul>
+
+
+    <div class="campus-info-item">
+
+    <div class="info-icon">
+        <a
+    href="https://wa.me/923268282325"
+    target="_blank"
+    class="info-action">
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
     </div>
-    <div class="contact12">
-        <h2>Kids & Boys Campus </h2>
-        <ul>
-          <li>03268282324</li>
-          <li>03268282325</li>
-          <li>03268282326</li>
-        </ul>
+
+    <div class="info-content">
+        <h3>Need Help?</h3>
+        <p>Contact our campus team</p>
     </div>
-    <div class="contact12">
-         <h2>Jinnah Campus </h2>
-        <ul>
-          <li>03268282321</li>
-          <li>03268282322</li>
-          <li>03268282334</li>
-        </ul>
+
+   
+
+</div>
+
+    <div class="campus-info-item">
+
+        <div class="info-icon">
+            <i class="fa-solid fa-compass"></i>
+        </div>
+
+        <div class="info-content">
+            <h3>Find Your Campus</h3>
+            <p>Select a campus to view directions</p>
+        </div>
+
     </div>
-    <div class="contact13">
-        <h2>Fatima Campus  </h2>
-        <ul>
-          <li>03268282326</li>
-        </ul>
+
+</div>
+<div class="capmus-heading">
+  <h2> What You'll Find at Our Campuses</h2>
+  <p>Everything students need for a better learning experience</p>
+</div>
+<section class="entire-campus">
+  
+  <div class="campus-box">
+    <div class="campus-img">
+      <img src="/Assest/classroom.jpeg" alt="">
     </div>
-    <div class="contact13">
-         <h2>Sakina Campus  </h2>
-        <ul>
-          <li>03268282332</li>
-        </ul>
-    </div>
-    <div class="contact13">
-        <h2>Khadija Campus  </h2>
-        <ul>
-          <li>03268282330</li>
-        </ul>
-    </div>
-    <div class="contact13">
-        <h2>Daska City Campus </h2>
-        <ul>
-          <li>03268282325</li>
-        </ul>
-    </div>
-    <div class="contact13">
-        <h2>Naseem Campus </h2>
-        <ul>
-          <li>03268282331</li>
-        </ul>
+    <div class="campus-text">
+      <h3>Spacious and comfortable classrooms designed for focused learning.</h3>
     </div>
   </div>
-  <hr>
-  <div class="socialheading"><h1>SOCIAL MEDIA</h1></div>
-  <div class="socialbox">
-    <div class="facebook">
-        <img src="/Assest/facebook-logo2.jpg" alt="facebook logo">
-        <a href="https://www.facebook.com/dskbrain?rdid=IPNQMEunXkF4ZX8T&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BxfqgjV1E%2F#">Follow Now</a>
+
+  <div class="campus-box">
+    <div class="campus-img">
+      <img src="/Assest/computerlab.jpg" alt="">
     </div>
-    <div class="whatsapp">
-        <img src="/Assest/whatapp-logo.png" alt="whatsapp logo">
-        <a>Contact Us</a>
-    </div>
-    <div class="youtube">
-        <img src="/Assest/youtube-logo.png" alt="youtube logo">
-       <a href="https://www.youtube.com/@BrainSchool-401">Subscribe Now</a>
-    </div>
-    <div class="instagram">
-        <img src="/Assest/instagram-logo.jpg" alt="instagram logo">
-        <a href="https://www.facebook.com/dskbrain?rdid=YewnbeB6l1j0ovg8&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BxfqgjV1E%2F#">Follow Now</a>
+    <div class="campus-text">
+      <h3>Well-equipped labs to support technology and computer education.</h3>
     </div>
   </div>
-  <hr>
-  </main>
-  <div id="footer"></div>
+
+  <div class="campus-box">
+    <div class="campus-img">
+      <img src="/Assest/sciencelabpic.jpg" alt="">
+    </div>
+    <div class="campus-text">
+      <h3>Practical learning environments for science subjects.</h3>
+    </div>
+  </div>
+
+  <div class="campus-box">
+    <div class="campus-img">
+      <img src="/Assest/safe-and-secure.jpg" alt="">
+    </div>
+    <div class="campus-text">
+      <h3>A safe and supportive environment for students.</h3>
+    </div>
+  </div>
+
+  <div class="campus-box">
+    <div class="campus-img">
+      <img src="/Assest/playground.jpeg" alt="">
+    </div>
+    <div class="campus-text">
+      <h3>Facilities that encourage physical activity and teamwork.</h3>
+    </div>
+  </div>
+
+  <div class="campus-box">
+    <div class="campus-img">
+      <img src="/Assest/sportfacilities.jpg" alt="">
+    </div>
+    <div class="campus-text">
+      <h3>Facilities that encourage physical activity and teamwork.</h3>
+    </div>
+  </div>
+</section >
+    </main>
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- ================= LEAFLET JS ================= -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/script.js">  </script>
+
+
 </body>
+
 </html>
