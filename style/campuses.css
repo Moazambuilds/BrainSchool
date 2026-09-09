@@ -87,7 +87,7 @@
 .campus-container {
     width: 80%;
     height: 600px;
-
+    max-width: 1400px;
     margin: auto;
 
     display: flex;
@@ -238,6 +238,7 @@
 
 .campus-info-bar {
     width: 80%;
+    max-width: 1400px;
     margin: 80px auto;
     min-height: 120px;
     display: flex;
@@ -245,7 +246,6 @@
 
     background: white;
 
-    border-radius: 10px;
 
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
 
@@ -311,22 +311,23 @@
 }
 .entire-campus {
     width: 80%;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px 30px;
+    gap: 50px;
     margin: 10px auto 80px;
 }
 
 .campus-box {
     width: 100%;
-    min-height: 450px;
+    min-height: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.252);
     overflow: hidden;
 }
 
 .campus-img {
     width: 100%;
-    height: 320px;
+    height: 280px;
 }
 
 .campus-img img {
@@ -341,13 +342,19 @@
     min-height: 120px;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding:15px;
     box-sizing: border-box;
 }
 
 .campus-text h3 {
     font-size: 18px;
     margin: 0;
+}
+.campus-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.2);
 }
 /* ==================================================
    RESPONSIVE
@@ -399,7 +406,7 @@
 @media (max-width: 992px) {
 
     .entire-campus {
-        width: 90%;
+        width: 80%;
         grid-template-columns: repeat(2, 1fr);
         gap: 35px 25px;
     }
@@ -426,7 +433,7 @@
 
 
     .hero-text {
-        width: 90%;
+        width: 80%;
     }
 
 
@@ -446,7 +453,7 @@
 
 
     .capmus-heading {
-        width: 90%;
+        width: 80%;
         margin: 35px auto;
     }
 
@@ -467,7 +474,7 @@
     */
 
     .campus-container {
-        width: 90%;
+        width: 80%;
         height: auto;
 
         flex-direction: column;
@@ -500,7 +507,7 @@
         padding: 13px 15px;
     }
     .campus-info-bar {
-    width: 90%;
+    width: 80%;
     flex-direction: column;
     align-items: stretch;
 }
@@ -516,7 +523,7 @@
     border-top: 1px solid #e5e5e5;
 }
 .entire-campus {
-        width: 90%;
+        width: 80%;
         grid-template-columns: 1fr;
         gap: 30px;
     }

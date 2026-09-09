@@ -114,12 +114,12 @@ body {
 }
 
 .menu {
-    min-width: 55%;
+    min-width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     position: relative;
-    margin-right: 10px;
+   
 }
 
 
@@ -266,6 +266,7 @@ body {
     align-items: center;
     gap: 10px;
     padding-right: 10px;
+    margin-left: 30px;
 }
 
 
@@ -285,7 +286,6 @@ body {
 
 .search .cross-icon {
     display: none;
-    font-size: 20px;
     cursor: pointer;
 }
 
@@ -617,7 +617,7 @@ footer p {
         gap: 0;
         padding: 0;
         margin: 0;
-        background-color: aliceblue;
+        background-color: white;
     }
 
     .menu ul li {
@@ -667,7 +667,10 @@ footer p {
     .drop.dropdown-open .dropdown ul {
         display: block;
     }
-
+    .drop.dropdown-open .header-icon{
+        transform: rotate(180deg);
+        margin-left: 10px;
+    }
 
     /* -------------------------
        More Dropdown Open
@@ -677,7 +680,10 @@ footer p {
         display: block;
     }
 
-
+    .drop1.dropdown-open .header-icon{
+        transform: rotate(180deg);
+        margin-left: 10px;
+    }
     /* -------------------------
        Dropdown Items
     ------------------------- */
@@ -724,7 +730,7 @@ footer p {
         display: none;
         color: black;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 25px;
     }
 
 
@@ -735,7 +741,7 @@ footer p {
     .searchbox {
         height: 100%;
         gap: 10px;
-        background-color: transparent;
+        background-color: white;
     }
 
     .inputbox {
