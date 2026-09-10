@@ -1,0 +1,138 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333333;
+}
+
+/* Header Section - Fix applied here */
+header {
+    width: 100%; /* Sahi ki gayi width */
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    display: block;
+    object-fit: contain;
+}
+
+/* Section Container Layout */
+.study-section {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Main Heading */
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.section-title {
+    color: #0284c7;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+}
+
+.section-heading h2 {
+    color: #1a365d;
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+}
+
+.sub-text {
+    color: #64748b;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Study Blocks & Titles */
+.study-block {
+    margin-bottom: 40px;
+}
+
+.study-block h3 {
+    color: #1a365d;
+    font-size: 1.3rem;
+    border-left: 4px solid #0284c7;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout & Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    border-top: 3px solid #0284c7;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #1a365d;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-left: none;
+    padding-left: 0;
+}
+
+.card p {
+    color: #4a5568;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Skill Card Custom Accent */
+.skill-card {
+    border-top: 3px solid #1a365d;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #cbd5e0;
+    font-size: 0.9rem;
+}
